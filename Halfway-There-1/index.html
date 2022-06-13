@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Styles CSS -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;700&display=swap" rel="stylesheet">
+  <!-- Deferred JS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=places" defer></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+  <!-- SCRIPTS -->
+  <script defer src="js/latlng.js"></script>
+  <script defer src="js/places.js"></script>
+  <script defer src="js/map.js"></script>
+  <script defer src="https://kit.fontawesome.com/66f05ac8f5.js" crossorigin="anonymous"></script>
+  <title>Halfway There // Let's Meet in the Middle</title>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar-two navbar navbar-dark bg-dark fixed-top navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> <span
+        class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse text-primary bg-dark" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active"> <a class="nav-link " id="new-search-btn" href="#!" onClick="history.go(0)">New
+            Search <span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item active"> <a class="nav-link text-white" id="new-search-btn" href="#!" data-toggle="modal"
+            data-target="#exampleModal3">How It Works<span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item active"> <a class="nav-link text-white" id="new-search-btn"
+            href="https://DC-halfway-there.surge.sh">Share</a> </li>
+        <div class="social-media">
+          <li> <a href="https://www.facebook.com/sharer/sharer.php?u=DC-halfway-there.surge.sh" target="_blank"> <i
+                class="fa-brands fa-facebook text-white"></i></a> </li>
+          <li> <a href="https://twitter.com/intent/tweet?text=DC-halfway-there.surge.sh" target="_blank"> <i
+                class="fa-brands fa-twitter text-white"></i></a> </li>
+          <li>
+            <a href="https://reddit.com/submit?url=&title=DC-halfway-there.surge.sh" target="_blank"
+              rel="nofollow noopener"><i class="fa-brands fa-reddit text-white"></i></a>
+          </li>
+          <li> <a
+              href="https://www.linkedin.com/shareArticle?mini=true&url=DC-halfway-there.surge.sh&title=&summary=&source="
+              target="_blank">
+              <i class="fa-brands fa-linkedin text-white"></i></a> </li>
+        </div>
+      </ul>
+    </div>
+  </nav> <!-- Modal -->
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModal3Label">We are here to get you Halfway There!</h4> <button
+            type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 class="welcome-message">We know gas prices are crazy and we're all out here looking to cut down on costs,
+            but also trying to keep in contact with family, friends, business partners or whoever.<br><br> Why not cut
+            your travel costs and time in half with a compromise? Introducing Halfway There, we have utilized the latest
+            Google technologies by calculating your address and the address of the person you want to meet up with to
+            bring you the top rated locations in that middle ground area. <br><br> Get started now by first entering
+            your location in the textbox below titled, Location 1, then enter the address of the person you are meeting
+            in Location 2. Adjust your search radius and you are ready to hit the road! </h3>
+        </div>
+        <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- LOGO -->
+  <div class="logo-container">
+    <div><img id="logo" src="images/logo.png" alt="halfway there logo" /></div>
+  </div>
+
+  <!-- CONTENT -->
+
+  <section class="section-hero container-fluid">
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="heading-primary">Whether it's networking with a colleague, catching up with an old friend, meeting
+          someone new... we get you <strong class="halfway-text"> Halfway There</strong> </h1> <button type="button"
+          class="btn find-locations-btn"><a href="#Find-Locations-Now" class="text-white">Find Locations
+            Now</a></button>
+      </div>
+      <div class="hero-img"> <img id="display-hero" src="images/hero-image.png" alt="man driving car" /> </div>
+      <!-- <div class="hero-img2"> <img id="display-hero" src="images/hero-image.png" alt="man driving car" /> </div> -->
+    </div>
+  </section>
+
+
+
+  <!-- ADDRESS SEARCH RANGE SLIDER FOR RADIUS SELECTION -->
+  <div class="search-container" id="Find-Locations-Now"> <label>Location 1:</label> <input type="text" id="address1"
+      placeholder="Enter address..." class="searchBar"> <label>Location 2:</label> <input type="text" id="address2"
+      placeholder="Enter address..." class="searchBar"> <input type="range" min="1" max="50" value="10" class="slider"
+      id="radiusSelector">
+    <div> <label>Search within: </label> <span id="radiusDisplay"></span> </div>
+  </div>
+
+  <!-- CENTER POINT DISPLAY -->
+  <div class="progress hidden">
+    <div id="myBar" class="progress-bar" style="height:24px;width:0"></div>
+  </div><br>
+  <div class="btn-container"> <button id="places-btn" type="button" class="btn btn-outline-dark">Find Places near
+      Halfway
+      Point</button> </div>
+
+  <!-- MAP DISPLAY -->
+  <div>
+    <div class="container" id="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- RESULTS DISPLAY -->
+
+  <div class="places-container">
+    <ul id="display-places"></ul>
+  </div>
+
+
+  <!-- MODAL -->
+  <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalCenteredLabel"></h3>
+          <div class="stars-outer">
+            <div class="stars-inner"></div>
+          </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span class="close-modal"
+              aria-hidden="true">&times;</span> </button>
+          <div class="modal-body">
+            <ul id="display-miles"></ul>
+            <ul id="display-miles-two"></ul>
+            <ul class="modal-window" id="modal-body">
+              <li><a id="vicinity" href="#"></a></li>
+            </ul>
+          </div> <i id="copied"></i>
+          <div class="modal-footer" id="modal-footer"> </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first,, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

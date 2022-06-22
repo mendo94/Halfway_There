@@ -138,9 +138,10 @@ let placeAddressLng = null;
 
 function getDetails(index) {
   let place = results[index];
+  console.log(place);
 
-  placeAddressLat = place.geometry.viewport.Ab.h;
-  placeAddressLng = place.geometry.viewport.Ua.h;
+  placeAddressLat = place.geometry.viewport.ub.hi;
+  placeAddressLng = place.geometry.viewport.Ra.hi;
 
   console.log(
     `${placeAddressLat}, ${placeAddressLng} are the lat and long of locaiton`

@@ -11,7 +11,7 @@
 
 ## Technologies
 
-<p>Javacript, HTML, CSS, Bootstrap, Google Cloud Platform: Google Maps API, Google Places API, Leaflet API and Open Street Map</p>
+<p>Javacript, HTML, CSS, Bootstrap, Leaflet API and Open Street Map, Google Cloud Platform: Google Maps API, Google Places API</p>
 
 
 <!-- AUTHORS-->

@@ -3,8 +3,8 @@
 <div id="header" align="center">
   <img src="images/logo.png" width="400"/>
 </div>
-<strong>Purpose of the app:</strong> Cut down on travel time and gas money between two users by utilizing google apis and js algorithms to bring a center point location between them. Display highest rated sit-down locations first to user marketed towards the center point location. <br>
-<strong>How to use:</strong> User enters two locations, the location they are coming from and the location of the person they want to meet with. Adjust the radius for more or less options and search by clicking the 'Places near halfway point' button. User will then be presented with a list of locations near the centerpoint to choose as their destination. They can then click on any location for further details such as how many stars, operation status and the address - which can they be copied and pasted into Google maps.<br>
+<strong>Purpose of the app:</strong> Cut down on travel time and gas money between two users by utilizing google apis and js algorithms to bring a center point location between them. Display highest rated sit-down locations first to user marketed towards the center point location. <br ><br>
+<strong>How to use:</strong> User enters two locations, the location they are coming from and the location of the person they want to meet with. Adjust the radius for more or less options and search by clicking the 'Places near halfway point' button. User will then be presented with a list of locations near the centerpoint to choose as their destination. They can then click on any location for further details such as how many stars, operation status and the address - which can they be copied and pasted into Google maps.<br ><br>
 <strong>Features on the app:</strong> Adjustable radius slider in case user would like to be presented with more or less options, highest rated establishments are shown first.
 
 <!-- AUTHORS-->
